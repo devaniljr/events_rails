@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root "home#index"
   get "events" => "home#index"
   get "events/:id" => "home#event", as: "event"
+  get "events/:id/edit" => "home#edit", as: "edit_event"
 end

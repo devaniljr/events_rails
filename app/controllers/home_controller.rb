@@ -6,4 +6,8 @@ class HomeController < ApplicationController
   def event
     @event = Event.find(params[:id])
   end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
 end
