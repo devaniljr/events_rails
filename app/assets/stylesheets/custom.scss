@@ -375,6 +375,9 @@ footer {
 // Admin Section
 
 section.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 3rem 0;
   padding-top: 2rem;
@@ -421,9 +424,26 @@ aside {
 
 // Forms
 
+.botao {
+  display: flex;
+}
+
+.botao button {
+  @extend .btn, .btn-outline-secondary !optional;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #666;
+  border-color: #666;
+}
+
+.botao button:hover {
+  background: $black;
+}
+
 form:not([class="button_to"]) {
   max-width: 400px;
-  margin-top: 1.5rem;
+  margin-left: 1rem;
 
   label {
     font-size: 1.1rem;
