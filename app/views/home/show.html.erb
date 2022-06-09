@@ -15,5 +15,6 @@
 
 <section class="admin">
   <%= link_to "Edit", edit_event_path, class:'button' %>
-  <%= link_to "Delete", event_path, method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%= link_to "Delete", @event, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%# <%= button_to "Delete", @event, method: :delete form_class: "button" %> %>
 </section>
