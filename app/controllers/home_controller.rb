@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.upcoming
   end
 
   def show
@@ -13,8 +13,11 @@ class HomeController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.update(event_params)
-    redirect_to @event
+    if @event.update(event_params)
+      redirect_to @event, notice: "Event successfully updated!"
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def new
@@ -23,8 +26,11 @@ class HomeController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.save
-    redirect_to @event
+    if @event.save
+      redirect_to @event, notice: "Event successfully created!"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -37,7 +43,7 @@ class HomeController < ApplicationController
 
   def event_params
     params.require(:event).
-      permit(:name, :description, :location, :price, :starts_at)
+      permit(:name, :description, :location, :price, :starts_at, :capacity, :image_file_name)
   end
 
 end
