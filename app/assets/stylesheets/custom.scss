@@ -67,11 +67,11 @@ header {
       letter-spacing: 1px;
 
       &.left {
-        @extend .mr-auto !optional;
+        margin-right: auto;
       }
 
       &.right {
-        @extend .ml-auto !optional; 
+        margin-left: auto;
       }
 
       li {
