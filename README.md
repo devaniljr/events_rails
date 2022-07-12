@@ -1,6 +1,6 @@
 # EVENT RAILS
 
-This was a course created during Pragmatic Studio training. The objective was to learn the main concepts of Ruby on Rails by creating an event logging application.
+This was a project created during Pragmatic Studio training. The objective was to learn the main concepts of Ruby on Rails by creating an event logging application.
 
 ### Demo: https://event-rails-dev.herokuapp.com/
 
