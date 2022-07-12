@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  root "home#index"
+  resources :categories
+  root "events#index"
   
-  resources :events, :controller => "home" do
+  resources :events do
     resources :registrations
+    resources :likes
   end
 
   resource :session, only: [:new, :create, :destroy]

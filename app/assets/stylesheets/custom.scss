@@ -168,8 +168,12 @@ section.event {
 
 // Event Show Page
 
+.content-event-show {
+  display: flex;
+}
+
 section.event-details {
-  @extend .row !optional;
+  @extend .row;
 
   .image {
     @extend .col-md-3, .text-left !optional;
@@ -180,11 +184,12 @@ section.event-details {
   }
 
   .details {
-    @extend .col-md-7, .text-left !optional;
+    @extend .col, .text-left;
   }
 
   aside {
-    @extend .col-md-2 !optional;
+    @extend .col;
+    flex-grow: 2;
   }
 
   h1 {
