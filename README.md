@@ -1,3 +1,3 @@
-# README
+# EVENT RAILS
 
-This is a simple app to learn Ruby on Rails. It's stiil in construction while I learn.
+> This was a course created during Pragmatic Studio training. The objective was to learn the main concepts of Ruby on Rails by creating an event logging application.
